@@ -20,9 +20,9 @@
    <children>
       <Pane prefHeight="382.0" prefWidth="417.0" style="-fx-background-position: center;">
          <children>
-            <Pane layoutX="-5.0" prefHeight="200.0" prefWidth="276.0" style="-fx-background-color: #474645;">
+            <Pane layoutX="-5.0" prefHeight="146.0" prefWidth="276.0" style="-fx-background-color: #474645;">
                <children>
-                  <TextField layoutX="90.0" layoutY="23.0" style="-fx-background-color: darkgray;" />
+                  <TextField fx:id="campo1" layoutX="90.0" layoutY="23.0" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: darkgray;" />
                   <Label layoutX="14.0" layoutY="23.0" prefHeight="19.0" prefWidth="59.0" text="Usuario" textFill="#fcfafa">
                      <font>
                         <Font size="13.0" />
@@ -38,28 +38,28 @@
                         <Font size="13.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="90.0" layoutY="56.0" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: darkgray;" />
-                  <TextField layoutX="90.0" layoutY="88.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: darkgray;" />
+                  <TextField fx:id="campo2" layoutX="90.0" layoutY="56.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: darkgray;" />
+                  <TextField fx:id="campo3" layoutX="90.0" layoutY="88.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: darkgray;" />
                </children>
             </Pane>
             <Pane layoutX="267.0" prefHeight="362.0" prefWidth="150.0">
                <children>
-                  <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Añadir" textFill="#fffafa">
+                  <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#Insertar" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Añadir" textFill="#fffafa">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="27.0" layoutY="59.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Limpiar" textFill="WHITE">
+                  <Button layoutX="27.0" layoutY="59.0" mnemonicParsing="false" onAction="#Limpiar" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Limpiar" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="27.0" layoutY="103.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Buscar" textFill="WHITE">
+                  <Button layoutX="27.0" layoutY="103.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Buscar" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="27.0" layoutY="181.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Ingresos" textFill="WHITE">
+                  <Button layoutX="27.0" layoutY="181.0" mnemonicParsing="false" onAction="#Insertar" prefHeight="53.0" prefWidth="97.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px;" text="Ingresos" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -71,16 +71,16 @@
                   </Button>
                </children>
             </Pane>
-            <TitledPane animated="false" layoutX="23.0" layoutY="215.0" prefHeight="96.0" prefWidth="234.0" style="-fx-background-color: #474645;" text="Cliente Premium" textFill="#1b1a1a">
+            <TitledPane animated="false" layoutX="33.0" layoutY="167.0" prefHeight="96.0" prefWidth="234.0" style="-fx-background-color: #474645;" text="Cliente Premium" textFill="#1b1a1a">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474645;">
                      <children>
-                        <RadioButton layoutX="29.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Si" textFill="#f5f3f3">
+                        <RadioButton fx:id="oprSi" layoutX="29.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Si" textFill="#f5f3f3">
                            <toggleGroup>
                               <ToggleGroup fx:id="clientePrem" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="29.0" layoutY="39.0" mnemonicParsing="false" text="No" textFill="#fffefe" toggleGroup="$clientePrem" />
+                        <RadioButton fx:id="oprNo" layoutX="29.0" layoutY="39.0" mnemonicParsing="false" text="No" textFill="#fffefe" toggleGroup="$clientePrem" />
                      </children>
                   </AnchorPane>
               </content>
