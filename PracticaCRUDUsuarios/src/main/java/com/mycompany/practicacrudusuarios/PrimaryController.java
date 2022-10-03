@@ -17,6 +17,9 @@ public class PrimaryController {
     private TextField campo3;
     
     @FXML
+    private TextField campo12;
+    
+    @FXML
     private RadioButton oprSi;
     @FXML
     private RadioButton oprNo;
@@ -69,6 +72,6 @@ public class PrimaryController {
     
      @FXML
     private void Ingresos() throws IOException {
-         CRUDUsuario.totalIngresos(con);
+         CRUDUsuario.totalIngresos(con, campo12);
     }
 }

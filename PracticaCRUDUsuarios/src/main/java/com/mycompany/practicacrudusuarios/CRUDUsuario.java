@@ -87,7 +87,7 @@ public class CRUDUsuario {
 
     }
 
-    public static void totalIngresos(Connection conexion) {
+    public static void totalIngresos(Connection conexion, TextField campo5) {
 
         PreparedStatement ps;
         ResultSet rs;
@@ -111,7 +111,9 @@ public class CRUDUsuario {
 
             }
 
-            System.out.println("Total Ingresos : " + (total_ingresos - total_descuentos));
+            //System.out.println("Total Ingresos : " + (total_ingresos - total_descuentos));
+            String total = String.valueOf(total_ingresos - total_descuentos);
+            campo5.setText(total);
 
         } catch (SQLException ex) {
             System.out.println(ex.toString());
